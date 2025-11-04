@@ -1,40 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moje portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — LK4Plug</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Ahoj! Jsem Lukáš Kublák</h1>
-    <p>Začínající webový vývojář</p>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">LK4Plug — Portfolio</h1>
+      <nav>
+        <a href="html/">Hlavní stránka</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="o-mne">
-    <h2>O mně</h2>
-    <p>Jsem začínající sponzor stránky CASEHUG.COM.</p>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <h2>Ahoj — jsem LK4Plug</h2>
+      <p>Ukázka mých projektů, designu a kódu. Níže najdeš výběr hotových prací.</p>
+      <p><a class="btn" href="#projects">Prohlédnout projekty</a></p>
+    </section>
 
-  <section id="projekty">
-    <h2>Moje projekty</h2>
+    <section id="projects" class="card-grid">
+      <article class="card">
+        <h3>Projekt 1</h3>
+        <p>Krátký popis projektu. Technologie: HTML, CSS, JS.</p>
+        <p><a class="btn small" href="#">Demo</a></p>
+      </article>
 
-    <div class="projekt">
-      <h3>Projekt 1 (promo)</h3>
-      <p>Udělal jsem klasický začínající web o stánce casehug.com, který nevypadá vůbec špatně</p>
-      <a href="https://lk4plug.github.io" target="_blank">Otevřít projekt</a>
+      <article class="card">
+        <h3>Projekt 2</h3>
+        <p>Krátký popis projektu. Technologie: React, Node.</p>
+        <p><a class="btn small" href="#">Demo</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Projekt 3</h3>
+        <p>Krátký popis projektu. Technologie: Python, Flask.</p>
+        <p><a class="btn small" href="#">Repo</a></p>
+      </article>
+    </section>
+
+    <section id="about" class="about">
+      <h2>O mně</h2>
+      <p>Krátký odstavec o tobě — zkušenosti, role, co hledáš.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Kontakt</h2>
+      <p>Email: <a href="mailto:tvuj@email.cz">tvuj@email.cz</a></p>
+      <p>Github: <a href="https://github.com/lk4plug" target="_blank" rel="noopener">lk4plug</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> LK4Plug — Všechna práva vyhrazena</small>
     </div>
-  </section>
-
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:tvoje@email.cz">lk4plug@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/lk4plug" target="_blank">lk4plug</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 [Lukáš Kublák] | <a href="https://validator.w3.org/">HTML validátor</a> | <a href="https://jigsaw.w3.org/css-validator/">CSS validátor</a></p>
   </footer>
+
+  <script>
+    // aktualizace roku v patičce
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
